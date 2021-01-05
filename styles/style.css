@@ -26,11 +26,11 @@ body {
 }
 
 .add__label {
-  margin-top: 30px;
+  margin-top: 10px;
   color: #f8c4cf;
 }
 
-.todo-list {
+.todos {
   list-style: none;
   width: 200px;
   margin: 5% auto;
@@ -40,7 +40,7 @@ body {
   grid-gap: 1rem;
 }
 
-.todo-list > li {
+.todos__li {
   border: 3px ridge white;
   background: #dba1b2;
   padding: 2px 4px;
@@ -58,7 +58,7 @@ body {
           align-items: center;
 }
 
-.todo-list > li > i {
+.todos__li > i {
   color: #245e4d;
   cursor: pointer;
 }
@@ -68,6 +68,10 @@ input[type="text"]:focus {
   border: none;
   color: #dba1b2;
   max-width: 300px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.filtered {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
