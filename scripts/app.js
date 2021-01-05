@@ -1,8 +1,11 @@
 // addForm
 const todoAdd = document.querySelector('.add');
+// ul
 const todoList = document.querySelector('.todos');
 // searchInput
-const search = document.querySelector('.todo-header__search input');
+const search = document.querySelector('.search input');
+// clearbutton
+const clearBtn = document.querySelector('.clear');
 
 
 /* ################ localStorage ################ */
@@ -75,13 +78,21 @@ const createTodoList = task => {
 
 /* ################ 削除 ################ */
 
-todoList.addEventListener('click', function(event) {
+todoList.addEventListener('click', event => {
     if(event.target.classList.contains('delete')) {
         event.target.parentElement.remove();
         // localStorageから削除
         const task = event.target.parentElement.textContent.trim();
         deleteTaskFromLocalStorage(task);
     }
+});
+
+clearBtn.addEventListener('click', () => {
+    while(todoList.lastChild) {
+        todoList.removeChild(todoList.lastChild);
+    }
+
+    localStorage.clear();
 });
 /* ################ 削除 ################ */
 
@@ -106,5 +117,3 @@ search.addEventListener("keyup", () => {
     filterTaskes(inputValue);
 });
 /* ################ 検索 ################ */
-
-

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This site is a todo test" />
+    <meta name="description" content="This site is a local todo" />
     <link rel="icon" href="images/todo_favicon.png" />
     <title>todoList</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -12,23 +12,38 @@
 </head>
 <body>
     <div class="container">
+
          <header class="todo-header">
              <h1 class="todo-header__title">Todo List</h1>
-             <form class="todo-header__search form-control">
-                 <input type="text" name="search" class="form-control" placeholder="Search KeyWord" >
-             </form>
-         </header>
-         
-         <ul class="todos">
-             <!-- jsでリストを追加 -->
-         </ul>
+        </header>
 
-         <form class="add">
-             <label class="add__label">ADDING TASK</label>
-             <input type="text" name="add" placeholder="New Text">
-         </form>
+        <main class="main">
+            <div class="main__inner">
+                <div class="form-container">
+                    <!-- 追加 -->
+                    <form class="add">
+                        <label class="add__label">ADDING TASK</label>
+                        <input type="text" name="add" placeholder="New Text">
+                    </form>
 
-    </div>
+                    <!-- 検索 -->
+                    <form class="search form-control">
+                        <label class="search__label">SEARCHING TASK</label>
+                        <input type="text" name="search" class="form-control" placeholder="Search KeyWord" >
+                    </form>
+
+                    <!-- 削除 -->
+                    <button class="clear">AllClear</button>
+                </div>
+
+                <!-- todoリスト -->
+                <ul class="todos">
+                    <!-- jsでリストを追加 -->
+                </ul>
+            </div>
+        </main>
+
+    </div><!-- container -->
 
 
     
